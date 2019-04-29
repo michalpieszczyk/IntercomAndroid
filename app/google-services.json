@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "619597214933",
+    "firebase_url": "https://mprojekt-7a0e1.firebaseio.com",
+    "project_id": "mprojekt-7a0e1",
+    "storage_bucket": "mprojekt-7a0e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619597214933:android:103473dfa9152c16",
+        "android_client_info": {
+          "package_name": "com.example.intercomandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619597214933-3u2mgm11kamilt2t02i74eshavq3u4ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEeNWw4pdQpQlU9Y4kfl1DaPV8DYijmck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619597214933-3u2mgm11kamilt2t02i74eshavq3u4ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
