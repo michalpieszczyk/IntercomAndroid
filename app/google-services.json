@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "619597214933-8lqvhdpallnncm7tm4mf9t3hi96brl1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.intercomandroid",
+            "certificate_hash": "dce9830c2afd6a89d0544388d88930227712c153"
+          }
+        },
+        {
           "client_id": "619597214933-3u2mgm11kamilt2t02i74eshavq3u4ju.apps.googleusercontent.com",
           "client_type": 3
         }
