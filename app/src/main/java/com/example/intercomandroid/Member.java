@@ -1,35 +1,32 @@
 package com.example.intercomandroid;
 
+import android.graphics.Bitmap;
 import android.media.Image;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 
 public class Member {
-    public String getName() {
-        return Name;
+
+
+    public String getDate() {
+        return Date;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setDate(String date) {
+        Date = date;
     }
 
-    public Integer getAge() {
-        return Age;
-    }
+    private String Date;
 
-    public void setAge(Integer age) {
-        Age = age;
-    }
-
-    public android.media.Image getImage() {
+    public Bitmap getImage() {
         return Image;
     }
 
-    public void setImage(android.media.Image image) {
+    public void setImage(Bitmap image) {
         Image = image;
     }
 
-    private String Name;
-    private Integer Age;
-    private Image Image;
+    private Bitmap Image;
 }

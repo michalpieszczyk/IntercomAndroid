@@ -6,14 +6,21 @@ import android.graphics.Bitmap;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView MyFaceHomeScreen;
@@ -22,17 +29,13 @@ public class MainActivity extends AppCompatActivity {
     Member member;
     DatabaseReference reff;
 
-
-   // FirebaseDatabase database = FirebaseDatabase.getInstance();
-    //DatabaseReference myRef = database.getReference("message");
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //FirebaseApp.initializeApp(this);
         FirebaseApp.initializeApp(MainActivity.this);
+
+
 
         MyFaceHomeScreen = (ImageView)findViewById(R.id.MyFaceHomeScreen);
         ButtonCall = (Button)findViewById(R.id.ButtonCall);
@@ -43,25 +46,12 @@ public class MainActivity extends AppCompatActivity {
         ButtonSendData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                member.setName("mich");
-                member.setAge(20);
+                member.setDate(DateFormat.getDateTimeInstance().format(new Date()));
                 reff.push().setValue(member);
                 Toast.makeText(MainActivity.this,"Succesfuly added data to firebase!",Toast.LENGTH_LONG).show();
 
             }
         });
-
-
-
-
-
-        //ButtonSendData.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-           // public void onClick(View v) {
-
-            //    myRef.setValue("Hello, World!");
-          //  }
-       // });
 
         ButtonCall.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -83,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         if(resultCode == RESULT_OK)
         {
             Bitmap b = (Bitmap)data.getExtras().get("data");
+            //member.setImage(b);
             MyFaceHomeScreen.setImageBitmap(b);
         }
     }
