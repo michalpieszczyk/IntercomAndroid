@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         ButtonSendData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri file = getImageUri(null,b);
+                //Uri file = getImageUri(this,b);
                 StorageReference Ref = mStorageRef.child(member.getDate()+'.'+getExtension(file));
 
                 Ref.putFile(file)
@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void takePicture() {
         Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        i.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
         startActivityForResult(i, 0);
     }
 
@@ -108,14 +110,15 @@ public class MainActivity extends AppCompatActivity {
             MyFaceHomeScreen.setImageBitmap(b);
             reff.push().setValue(member.getDate());
             Toast.makeText(MainActivity.this,"Succesfuly added data to firebase!",Toast.LENGTH_LONG).show();
+            file = getImageUri(this,b);
 
         }
     }
 
-    public Uri getImageUri(Context inContext, Bitmap inImage) {
+    private Uri getImageUri(Context context, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), inImage, "Title", null);
         return Uri.parse(path);
     }
 
