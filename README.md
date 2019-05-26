@@ -2,6 +2,7 @@
 
 Android Intercom APP with Google Firebase Storage, Database and Cloud Messaging funcionality
 
+
 Basic Funcionality of the app: 
 
 • Reuse your old smartphone as Intercom for your house.
@@ -16,8 +17,20 @@ Basic Funcionality of the app:
 
 • You receive a notification on your phone that someone is comming to your house.
 
-Current version: 
 
+Current version v3: 
+
+• Home screen working properly with address, buttons and picture. 
+
+• Aplication sending photo to Firebase Storage.
+
+• Applicaton creating new record in Firebase Database with current timestamp. 
+
+• Aplication receiving notifications send from Firebase Cloud Messaging Panel.
+
+Not working: 
+
+• Automatic notification sending after new data is added to Storage / Database. This can not be done using only aplication and firebase. Web server is required.
 
 
 ## Licence & copyright
