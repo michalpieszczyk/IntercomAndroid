@@ -7,7 +7,7 @@ Android Intercom APP with Google Firebase Storage, Database and Cloud Messaging 
 
 • Reuse your old smartphone as Intercom for your house.
 
-• Guest comming to your house see the welcome screen with your address. 
+• Welcome screen with your address is presented.
 
 • Guest takes a picture of himself using front facing camera, then tap "Call" to notify you that someone is comming. 
 
@@ -17,6 +17,7 @@ Android Intercom APP with Google Firebase Storage, Database and Cloud Messaging 
 
 • You receive a notification on your phone that someone is comming to your house.
 
+• Lighting the pathway to your house using flashlight (used only when it's dark outside).
 
 ### Current version v3: 
 
@@ -30,8 +31,9 @@ Android Intercom APP with Google Firebase Storage, Database and Cloud Messaging 
 
 ### Not working: 
 
-• Automatic notification sending after new data is added to Storage / Database. This can not be done using only aplication and firebase. Web server is required.
+• Automatic notification sending after new data is added to Storage / Database. This can not be done using only aplication and firebase.
 
+• Flashlight (pathway lighting).
 
 ## Licence & copyright
-© Michal Pieszczyk, Programming II classes @ Opole Univesity Of Technology
+© Michal Pieszczyk, Programming II classes @ Opole Univesity Of Technology 2019
